@@ -6,37 +6,57 @@ import java.util.Scanner;
 public class Assignment2Application {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//collect a random number
-		//generate random number between 1 and 100
-		//dont show random number to user
-		//ask user to pick a number between 1 and 100
-		//collect user input
-	//etc...
+	
 		
-		
-		//first prompt user to pick a number
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Pick a number between 1 and 100 ");
-		String userInput = scanner.nextLine();
-		Integer convertedInput = Integer.parseInt(userInput);
-		
+
+		String userInput = collectInput(scanner, "Pick a number between 1 and 100 ");
+
+		int convertedInput = Integer.parseInt(userInput);
+
 		Random random = new Random();
-		
-		for(int i = 1; i<101; i++) {
-			System.out.println(random.nextInt(101));
-		}
-		if(convertedInput <=100 && (convertedInput >=1)) {
-			System.out.println("You win!");
-		}else if(convertedInput) {
-				System.out.println();
-			}
+		int randomNumber = random.nextInt(101);
+		for (int i= 1; i<5; i++) {
 			
+			Scanner scan = new Scanner(System.in);
+		if (convertedInput == randomNumber) {
 			
-		}
+							System.out.println("You win!");
+						} else if (convertedInput < randomNumber) {
+							System.out.println("Please pick a higher number");
+						} else if (convertedInput > randomNumber) {
+							System.out.println("Please pick a lower number");
+			
+						}
+						System.out.println("You lose, the number to guess was " + randomNumber);
+					}
+	}
+
 		
-		scanner.close();
-		
+	
+
+	private static String collectInput(Scanner scanner, String messageInConsole) {
+		System.out.println(messageInConsole);
+		String userInput = scanner.nextLine();
+		return userInput;
+
+//		for (int i = 1; i < 5; i++) {
+			// System.out.println(randomNumber);
+//	System.out.println("You lose, the number to guess was " + randomNumber);
+
+//LOOP IF STATEMENT 5 TIMES THEN END PROGRAM////
+
+//			if (convertedInput == randomNumber) {
+//
+//				System.out.println("You win!");
+//			} else if (convertedInput < randomNumber) {
+//				System.out.println("Please pick a higher number");
+//			} else if (convertedInput > randomNumber) {
+//				System.out.println("Please pick a lower number");
+//
+//			}
+//			System.out.println("You lose, the number to guess was " + randomNumber);
+//		}
 	}
 
 }
