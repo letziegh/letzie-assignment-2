@@ -9,16 +9,21 @@ public class Assignment2Application {
 
 		Scanner scanner = new Scanner(System.in);
 
-		String userInput = collectInput(scanner, "Pick a number between 1 and 100 ");
+		// String userInput = collectInput(scanner, "Pick a number between 1 and 100 ");
+		// changed to scanner
 
-		int convertedInput = Integer.parseInt(userInput);
-
+		
+		// int convertedInput = Integer.parseInt(userInput);
 		Random random = new Random();
 		int randomNumber = random.nextInt(101);
+		
+		System.out.println("Please pick a number between 1 and 100");
+		int convertedInput = scanner.nextInt();
 
-		for (int i = 1; i < 5; i++) {
+		
 
-			Scanner scan = new Scanner(System.in);
+		for (int i = 0; i < 4; i++) {
+			
 
 			if (convertedInput == randomNumber) {
 
@@ -29,15 +34,16 @@ public class Assignment2Application {
 				System.out.println("Please pick a lower number");
 
 			}
+			convertedInput = scanner.nextInt();
 		}
-		System.out.println("You lose, the number to guess was " + randomNumber);
+		System.out.println("You lose, the number to guess was: " + randomNumber);
 
 	}
 
-	private static String collectInput(Scanner scanner, String messageInConsole) {
-		System.out.println(messageInConsole);
-		String userInput = scanner.nextLine();
-		return userInput;
+//	private static String collectInput(Scanner scanner, String messageInConsole) {
+//		System.out.println(messageInConsole);
+//		String userInput = scanner.nextLine();
+	//	return userInput;
 
 //		for (int i = 1; i < 5; i++) {
 		// System.out.println(randomNumber);
@@ -58,4 +64,4 @@ public class Assignment2Application {
 //		}
 	}
 
-}
+
