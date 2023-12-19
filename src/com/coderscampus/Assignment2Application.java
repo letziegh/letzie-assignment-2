@@ -16,18 +16,28 @@ public class Assignment2Application {
 		// int convertedInput = Integer.parseInt(userInput);
 		Random random = new Random();
 		int randomNumber = random.nextInt(101);
-		
+		System.out.println(randomNumber);
 		System.out.println("Please pick a number between 1 and 100");
 		int convertedInput = scanner.nextInt();
-
+		
+			
+		
+//		while(convertedInput <1 || convertedInput>100) {
+//		  
+//				
+//				System.out.println("Your guess is not between 1 and 100, please try again");
+//				convertedInput = scanner.nextInt();
+//		
+//		}
 		
 
 		for (int i = 0; i < 4; i++) {
 			
-
 			if (convertedInput == randomNumber) {
-
+				
 				System.out.println("You win!");
+	
+				
 			} else if (convertedInput < randomNumber) {
 				System.out.println("Please pick a higher number");
 			} else if (convertedInput > randomNumber) {
@@ -36,9 +46,13 @@ public class Assignment2Application {
 			}
 			convertedInput = scanner.nextInt();
 		}
+		
 		System.out.println("You lose, the number to guess was: " + randomNumber);
-
+		
 	}
+}
+
+	
 
 //	private static String collectInput(Scanner scanner, String messageInConsole) {
 //		System.out.println(messageInConsole);
@@ -62,6 +76,6 @@ public class Assignment2Application {
 //			}
 //			System.out.println("You lose, the number to guess was " + randomNumber);
 //		}
-	}
+	
 
 
